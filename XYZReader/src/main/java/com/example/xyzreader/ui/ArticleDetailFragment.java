@@ -10,16 +10,20 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.text.Html;
 import android.text.format.DateUtils;
 import android.text.method.LinkMovementMethod;
+import android.transition.Slide;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -82,6 +86,15 @@ public class ArticleDetailFragment extends Fragment implements
         mStatusBarFullOpacityBottom = getResources().getDimensionPixelSize(
                 R.dimen.detail_card_top_margin);
         setHasOptionsMenu(true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            int slideDuration = getResources().getInteger(R.integer.detail_desc_slide_duration);
+            Slide slide = new Slide(Gravity.BOTTOM);
+            slide.addTarget(R.id.content);
+            slide.setInterpolator(AnimationUtils.loadInterpolator(this.getActivity(), android.R.interpolator
+                    .linear_out_slow_in));
+            slide.setDuration(slideDuration);
+            this.getActivity().getWindow().setEnterTransition(slide);
+        }
     }
 
     public ArticleDetailActivity getActivityCast() {

@@ -16,12 +16,12 @@
 -->
 
 <resources>
-    <color name="photo_placeholder">#ccc</color>
 
-    <color name="primary_color">#F44336</color>
-    <color name="secondary_color">#E57373</color>
-    <color name="text_color">@android:color/white</color>
-    <color name="article_text_color">@android:color/black</color>
-    <color name="complementary_color">#D32F2F</color>
-    <color name="accent_color">#448AFF</color>
+    <style name="Theme.XYZReader.Home">
+        <item name="android:windowExitTransition">@transition/grid_exit</item>
+        <item name="android:windowReenterTransition">@transition/grid_reenter</item>
+    </style>
+    <style name="Theme.XYZReader.Detail">
+        <item name="android:windowSharedElementEnterTransition">@transition/shared_photo</item>
+    </style>
 </resources>
