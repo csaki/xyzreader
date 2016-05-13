@@ -25,13 +25,14 @@
     </style>
 
     <style name="TextAppearance.XYZReader.Article.Body" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:background">@android:color/white</item>
         <item name="android:textColor">@color/article_text_color</item>
         <item name="android:textColorLink">@color/accent_color</item>
         <item name="android:textSize">@dimen/detail_body_text_size</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">@dimen/detail_inner_horiz_margin</item>
-        <item name="android:layout_marginRight">@dimen/detail_inner_horiz_margin</item>
+        <item name="android:paddingLeft">@dimen/detail_inner_horiz_margin</item>
+        <item name="android:paddingRight">@dimen/detail_inner_horiz_margin</item>
         <item name="android:paddingBottom">@dimen/detail_body_bottom_margin</item>
         <item name="android:lineSpacingMultiplier">@fraction/detail_body_line_spacing_multiplier</item>
     </style>

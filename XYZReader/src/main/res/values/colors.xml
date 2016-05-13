@@ -24,4 +24,7 @@
     <color name="article_text_color">@android:color/black</color>
     <color name="complementary_color">#D32F2F</color>
     <color name="accent_color">#448AFF</color>
+
+
+    <color name="up_button_background">#33000000</color>
 </resources>
