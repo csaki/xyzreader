@@ -9,4 +9,17 @@
     <dimen name="fab_margin">24dp</dimen>
     <dimen name="offset_y">300dp</dimen>
 
+    <dimen name="fab_share_width">56dp</dimen>
+    <dimen name="fab_share_height">56dp</dimen>
+
+
+    <dimen name="subtitle_card_padding_left">16dp</dimen>
+    <dimen name="subtitle_card_padding_bottom">16dp</dimen>
+    <dimen name="subtitle_card_padding_rigth">16dp</dimen>
+
+    <dimen name="card_margin_rigth">4dp</dimen>
+    <dimen name="card_margin_left">4dp</dimen>
+    <dimen name="card_margin_top">4dp</dimen>
+    <dimen name="card_margin_bottom">4dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
 </resources>

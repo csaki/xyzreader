@@ -48,7 +48,7 @@
                         android:fontFamily="sans-serif-condensed"
                         android:lineSpacingMultiplier="0.9"
                         android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-                        android:textColor="#fff"
+                        android:textColor="@color/title_text_color"
                         android:textSize="@dimen/detail_title_text_size"
                         android:textStyle="bold" />
 
@@ -57,7 +57,7 @@
                         style="?android:attr/textAppearanceSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#8fff" />
+                        android:textColor="@color/subtitle_text_color" />
                 </LinearLayout>
 
                 <TextView
@@ -68,16 +68,12 @@
         </LinearLayout>
     </ScrollView>
 
-    <ImageButton
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_fab"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="@dimen/fab_share_width"
+        android:layout_height="@dimen/fab_share_height"
+        android:background="@color/accent_color"
+        android:src="@drawable/ic_action_share"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:background="@drawable/add_fab_background"
-        android:contentDescription="@string/action_share"
-        android:elevation="@dimen/fab_elevation"
-        android:src="@drawable/ic_share"
-        android:stateListAnimator="@anim/fab_state_list_anim" />
+        android:layout_margin="@dimen/fab_margin"/>
 </android.support.design.widget.CoordinatorLayout>
