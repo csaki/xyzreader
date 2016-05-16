@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -13,7 +13,9 @@
         android:id="@+id/up_container"
         android:background="@color/up_button_background"
         android:layout_width="56dp"
-        android:layout_height="56dp">
+        android:layout_height="56dp"
+        android:elevation="8dp"
+        >
 
         <ImageButton
             android:id="@+id/action_up"
@@ -23,4 +25,4 @@
             android:contentDescription="@string/up"
             android:src="@drawable/ic_arrow_back" />
     </FrameLayout>
-</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
