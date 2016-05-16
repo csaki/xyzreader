@@ -6,26 +6,26 @@
 
     <ImageView
         android:id="@+id/photo"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:scaleType="fitStart" />
 
     <ScrollView
         android:id="@+id/rootY"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/rootContent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:elevation="8dp">
 
             <com.example.xyzreader.ui.MaxWidthLinearLayout
                 android:id="@+id/content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:elevation="8dp"
                 android:maxWidth="@dimen/detail_card_max_width"
                 android:orientation="vertical">
 
