@@ -18,6 +18,7 @@ import android.support.v7.graphics.Palette;
 import android.text.Html;
 import android.text.format.DateUtils;
 import android.text.method.LinkMovementMethod;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -177,7 +178,17 @@ public class ArticleDetailFragment extends Fragment implements
                 if(scroll>width){
                     scroll = width*2/3;
                 }
-                configureOnClick(scroll, width);
+                DisplayMetrics metrics = new DisplayMetrics();
+                getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+                float logicalDensity = metrics.density;
+                int miniSize = (int) Math.ceil(100 * logicalDensity);
+                int scrollTo = size.x - miniSize;
+                if(scrollTo < miniSize){
+                    configureOnClick(scroll, scrollTo);
+                } else {
+                    configureOnClick(scroll, width);
+                }
+
             } else {
                 height = (int) Math.ceil(width / aspect);
                 rootContet.getLayoutParams().width = width;
