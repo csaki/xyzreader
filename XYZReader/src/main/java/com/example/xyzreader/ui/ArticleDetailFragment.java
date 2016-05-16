@@ -90,7 +90,7 @@ public class ArticleDetailFragment extends Fragment implements
         // the fragment's onCreate may cause the same LoaderManager to be dealt to multiple
         // fragments because their mIndex is -1 (haven't been added to the activity yet). Thus,
         // we do this in onActivityCreated.
-        getLoaderManager().initLoader(0, null, this);
+        getLoaderManager().initLoader(1, null, this);
     }
 
     @Override
@@ -181,11 +181,6 @@ public class ArticleDetailFragment extends Fragment implements
                         }
                     });
             onEnterAnimationComplete(height);
-        } else {
-            mRootView.setVisibility(View.GONE);
-            titleView.setText("N/A");
-            bylineView.setText("N/A");
-            bodyView.setText("N/A");
         }
     }
 
@@ -220,9 +215,11 @@ public class ArticleDetailFragment extends Fragment implements
     }
 
     public void onEnterAnimationComplete(int height) {
+        int scrollTo = height*1/3;
+
         Animator animator = ObjectAnimator.ofInt(
-                mRoot, "scrollY", height*1/3
-        ).setDuration(300);
+                mRoot, "scrollY", scrollTo
+        ).setDuration(500);
         animator.start();
     }
 }
